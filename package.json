@@ -1,0 +1,19 @@
+{
+  "name": "mencuba2",
+  "version": "1.0.0",
+  "description": "mencuba2",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch index.js",
+    "start": "node index.js"
+  },
+  "author": "aminuddin",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1",
+    "pg": "^8.11.5"
+  }
+}
