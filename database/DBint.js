@@ -1,9 +1,10 @@
 import pg from "pg";
 import "dotenv/config";
+import queryTableImages from "../model/uploadTable.js";
 
 const {Pool} = pg;
 
-const passport = new Pool({
+export const passport = new Pool({
     host: process.env.PGHOST,
     user: process.env.PGUSER,
     password: process.env.PGPASSWORD,
@@ -17,6 +18,9 @@ export const databaseConnection = async () => {
     try{
         await passport.query("SELECT NOW()");
         console.log("DB connected");
+
+        queryTableImages();
+        
     } catch(err){
         console.log("DB error");
     }
